@@ -1,0 +1,95 @@
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  display: none;
+}
+
+.checkbox:checked + label svg path {
+  stroke-dashoffset: 0;
+}
+
+.checkbox:focus + label {
+  transform: scale(1.03);
+}
+
+.checkbox + label {
+  display: block;
+  border: 2px solid var(--disable-color);
+  width: var(--d);
+  min-width: var(--d);
+  height: var(--d);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.checkbox + label:active {
+  transform: scale(1.05);
+  border-radius: 4px;
+}
+
+.checkbox + label svg {
+  pointer-events: none;
+}
+
+.checkbox + label svg path {
+  fill: none;
+  stroke: var(--secondary-color);
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 101;
+}
+
+.checkbox:disabled + label {
+  background-color: #e7e5e4;
+  cursor: default;
+}
+
+.filtersCheckbox + label {
+  border: 1px solid var(--primary-color);
+  border-radius: 0;
+}
+
+.filtersCheckbox:disabled + label {
+  border: 1px solid var(--disable-color);
+  cursor: not-allowed;
+}
+
+.filtersCheckbox + label:active {
+  border-radius: 0;
+}
+
+.lqsCheckbox + label {
+  border: none;
+  border-radius: 0;
+}
+
+.lqsCheckbox + label svg {
+  background-color: var(--ground_color);
+}
+
+.lqsCheckbox + label svg path {
+  stroke: var(--success-color);
+}
+
+.checkboxUser + label {
+  border: 2px solid #2f3440;
+}
+
+.checkboxUser + label svg path {
+  stroke: #fff;
+  stroke-width: 7px;
+}
+
+.checkboxUser:checked + label svg {
+  background-color: #2f3440;
+}
+
+.checkboxMainGreen + label svg {
+  margin-bottom: 3px;
+}
+
+.checkboxMainGreen + label svg path {
+  stroke: var(--success-color) !important;
+}
